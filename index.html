@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Script Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body class="container">
+    <h1 class="text-center bg-primary ">My Simple Calculator!</h1>
+    <section >
+        <table class="table table-dark table-striped container">
+            
+               
+                
+                    <tr>
+                        <td colspan="3"><input type="text" id="result" class="ps-5 pe-5 m-1 p-2"></td>
+                        <td><input onclick="clr()" class="p-4" type="button" value="C" id="result"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="p-4"type="button" value="1" onclick="view('1')"></td>
+                        <td><input class="p-4"type="button" value="2" onclick="view('2')"></td>
+                        <td><input class="p-4"type="button" value="3" onclick="view('3')"></td>
+                        <td><input class="p-4"type="button" value="/" onclick="view('/')"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="p-4"type="button" value="4" onclick="view('4')"></td>
+                        <td><input class="p-4"type="button" value="5" onclick="view('5')"></td>
+                        <td><input class="p-4"type="button" value="6" onclick="view('6')"></td>
+                        <td><input class="p-4"type="button" value="-" onclick="view('-')"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="p-4"type="button" value="7" onclick="view('7')"></td>
+                        <td><input class="p-4"type="button" value="8" onclick="view('8')"></td>
+                        <td><input class="p-4"type="button" value="9" onclick="view('9')"></td>
+                        <td><input class="p-4"type="button" value="+" onclick="view('+')"></td>
+                    </tr>
+                    <tr>
+                        <td><input class="p-4"type="button" value="." onclick="view('.')"></td>
+                        <td><input class="p-4"type="button" value="0" onclick="view('0')"></td>
+                        <td><input class="p-4"type="button" value="=" onclick="compute()"></td>
+                        <td><input class="p-4"type="button" value="*" onclick="view('*')"></td>
+                    </tr>
+           
+            
+          </table>
+          <hr>
+		  
+          <marquee class="bg-light" behavior="" direction="left"> <span style="color:black; font-style: italic; font-weight: 600;" >This Calculator Created By RH.Rabin</span></marquee>
+          <hr>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script>
+        function view(num){
+            document.getElementById("result").value +=num;
+        }
+        function compute(){
+            let x = document.getElementById("result").value;
+            let y = eval(x);
+            document.getElementById("result").value = y;
+        }
+        function clr(){
+            document.getElementById("result").value = " "
+        }
+    </script>
+</body>
+</html>
